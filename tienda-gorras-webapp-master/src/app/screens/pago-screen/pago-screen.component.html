@@ -1,0 +1,53 @@
+<div class="body-gorras">
+  <header>
+    <div class="header-container">
+      <div class="icons">
+        <i class="fas fa-search icon"></i>
+        <i class="fas fa-shopping-cart icon"></i>
+        <i class="fas fa-user icon"></i>
+      </div>
+
+      <div class="logo-section">
+        <div class="logo">BEHAT</div>
+        <div class="tagline">USAR BEHAT TE DA UN ESTILO DIFERENTE</div>
+      </div>
+
+      <div class="icons">
+        <div style="width: 68px;"></div>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="section-pago">
+    <div class="pago-container">
+      <h2 class="pago-title">Pago con PayPal</h2>
+
+      <div class="resumen-compra">
+        <p><strong>Producto:</strong> Gorra edición limitada</p>
+        <p><strong>Precio:</strong> $25.00 USD</p>
+        <p><strong>Envío:</strong> $5.00 USD</p>
+        <p><strong>Total:</strong> $30.00 USD</p>
+      </div>
+
+      <mat-form-field class="mat-input" appearance="outline">
+        <mat-label>Correo PayPal</mat-label>
+        <input matInput [(ngModel)]="paypal.email" placeholder="Escribe tu correo de PayPal">
+      </mat-form-field>
+      <div *ngIf="errors.email" class="invalid-feedback">{{ errors.email }}</div>
+
+      <mat-form-field class="mat-input" appearance="outline">
+        <mat-label>Contraseña PayPal</mat-label>
+        <input matInput [(ngModel)]="paypal.password" type="{{ inputType_1 }}" placeholder="Escribe tu contraseña">
+        <mat-icon matSuffix class="eye-icon" (click)="showPassword()">{{ hide_1 ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </mat-form-field>
+      <div *ngIf="errors.password" class="invalid-feedback">{{ errors.password }}</div>
+
+      <button type="submit" class="register-btn" (click)="pagar()">Pagar con PayPal</button>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Behat - Todos los derechos reservados
+  </footer>
+</div>

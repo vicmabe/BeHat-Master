@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  font-family: 'Times New Roman', Times, serif;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.body-gorras {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f1e0db;
+  color: #000000;
+  line-height: 1.6;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+  background-color: f1e0db;
+  padding: 30px 0;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo-section {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  letter-spacing: 2px;
+}
+
+.tagline {
+  font-size: 16px;
+  color: #000000;
+  font-style: Georgia;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+}
+
+.icon {
+  color: #FAF0E6;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.icon:hover {
+  color: rgb(0, 0, 0);
+}
+
+.pago-container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 50px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.pago-container:hover {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.15);
+}
+
+.pago-title {
+  text-align: center;
+  margin-bottom: 35px;
+  color: #000;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.resumen-compra {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.resumen-compra p {
+  margin-bottom: 10px;
+}
+
+.eye-icon {
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .register-container {
+    margin: 30px 20px;
+    padding: 40px;
+  }
+}
+
+
+
+/* Footer */
+footer {
+  margin-top: auto;
+  background-color: #000;
+  color: #FAF0E6;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+
+}
+@media (max-width: 768px) {
+  .header-container {
+      flex-direction: column;
+  }
+
+  .logo-section {
+      margin-bottom: 15px;
+  }
+
+  nav ul {
+      flex-wrap: wrap;
+  }
+
+  nav ul li {
+      margin: 5px 15px;
+  }
+
+  .register-container {
+      margin: 30px 20px;
+      padding: 30px;
+  }
+
+  .name-fields {
+      flex-direction: column;
+      gap: 0;
+  }
+}
+
+
+.register-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #003087;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+
+.register-btn:hover {
+  background-color: #001f5b;
+  transform: scale(1.02);
+}
+

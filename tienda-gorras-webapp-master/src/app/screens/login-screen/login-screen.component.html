@@ -1,0 +1,57 @@
+<div class="body-gorras">
+  <header>
+      <div class="header-container">
+          <div class="icons">
+              <i class="fas fa-search icon"></i>
+              <i class="fas fa-shopping-cart icon"></i>
+              <i class="fas fa-user icon"></i>
+          </div>
+
+          <div class="logo-section">
+              <div class="logo">BEHAT</div>
+              <div class="tagline">USAR BEHAT TE DA UN ESTILO DIFERENTE</div>
+          </div>
+
+          <div class="icons">
+              <!-- Espacio reservado para alinear -->
+              <div style="width: 68px;"></div>
+          </div>
+      </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="/">INICIO</a></li>
+      <li><a href="/mujer">MUJER</a></li>
+      <li><a href="/hombre">HOMBRE</a></li>
+      <li><a href="/promociones">promociones</a></li>
+    </ul>
+  </nav>
+
+  <div class="login-container">
+      <h2 class="login-title">Iniciar sesión</h2>
+      <form action="#" method="post">
+          <div class="form-group">
+            <input type="email" [(ngModel)]="username"  id="email" placeholder="Correo electrónico">
+            <!-- <div *ngIf="errors.username" class="invalid-feedback">{{ errors.username }}</div> -->
+          </div>
+
+          <div class="form-group">
+            <input type="{{type}}" [(ngModel)]="password" id="password" name="password_user" placeholder="Contraseña" (keyup.enter)="login()">
+            <div class="input-group-text" id="show-password" data-password="false">
+                <i *ngIf="type == 'password'" class="bi bi-eye-fill" (click)="showPassword()"></i>
+            </div>
+          </div>
+
+        <button class="login-btn" type="submit" (click)="login()" [disabled]="load">Iniciar sesión</button>
+
+          <div class="create-account">
+              <p>¿No tienes una cuenta? <a href="/registro-usuarios" >Crear cuenta</a></p>
+          </div>
+      </form>
+  </div>
+
+  <footer>
+      &copy; 2025 Behat - Todos los derechos reservados
+  </footer>
+</div>

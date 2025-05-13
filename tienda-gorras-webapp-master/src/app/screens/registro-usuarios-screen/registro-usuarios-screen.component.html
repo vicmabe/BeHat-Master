@@ -1,0 +1,70 @@
+<div class="body-gorras">
+  <header>
+    <div class="header-container">
+        <div class="icons">
+            <i class="fas fa-search icon"></i>
+            <i class="fas fa-shopping-cart icon"></i>
+            <i class="fas fa-user icon"></i>
+        </div>
+
+        <div class="logo-section">
+            <div class="logo">BEHAT</div>
+            <div class="tagline">USAR BEHAT TE DA UN ESTILO DIFERENTE</div>
+        </div>
+
+        <div class="icons">
+            <!-- Espacio reservado para alinear -->
+            <div style="width: 68px;"></div>
+        </div>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="/">INICIO</a></li>
+      <li><a href="/mujer">MUJER</a></li>
+      <li><a href="/hombre">HOMBRE</a></li>
+      <li><a href="/promociones">promociones</a></li>
+    </ul>
+  </nav>
+
+  <div class="section-registro">
+    <div class="register-container">
+      <h2 class="register-title">Crear cuenta</h2>
+
+      <mat-form-field class="mat-input" appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input matInput [(ngModel)]="alumno.first_name" placeholder="Escribe nombre" (keypress)="soloLetras($event)">
+      </mat-form-field>
+      <div *ngIf="errors.first_name" class="invalid-feedback">{{ errors.first_name }}</div>
+
+      <mat-form-field class="mat-input" appearance="outline">
+          <mat-label>Apellidos</mat-label>
+          <input matInput [(ngModel)]="alumno.last_name" placeholder="Escribe apellidos" (keypress)="soloLetras($event)">
+      </mat-form-field>
+      <div *ngIf="errors.last_name" class="invalid-feedback">{{ errors.last_name }}</div>
+
+      <mat-form-field class="mat-input" appearance="outline">
+        <mat-label>Correo electrónico</mat-label>
+        <input matInput [(ngModel)]="alumno.email" placeholder="Escribe correo electrónico" [disabled]="editar">
+      </mat-form-field>
+      <div *ngIf="errors.email" class="invalid-feedback">{{ errors.email }}</div>
+
+      <mat-form-field class="mat-input" appearance="outline" *ngIf="!editar">
+          <mat-label>Contraseña</mat-label>
+          <input matInput [(ngModel)]="alumno.password" type="{{ inputType_1 }}" placeholder="Escribe contraseña">
+          <mat-icon matSuffix class="eye-icon" (click)="showPassword()">{{hide_1 ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </mat-form-field>
+        <div *ngIf="errors.password" class="invalid-feedback">{{ errors.password }}</div>
+
+
+
+
+      <button type="submit" class="register-btn" (click)="registrar()">Crear</button>
+    </div>
+  </div>
+
+  <footer>
+      &copy; 2025 Behat - Todos los derechos reservados
+  </footer>
+</div>

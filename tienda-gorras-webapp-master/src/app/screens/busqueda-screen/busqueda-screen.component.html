@@ -1,0 +1,6 @@
+<!--Buscador-->
+<input type="text" [(ngModel)]="searchTerm" (input)="filtrarProductos()" id="ctn-bars-search" placeholder="¿Cual es tu estilo?">
+<div  *ngFor="let producto of productosFiltrados" class="producto-item" >
+  <img [src]="producto.image" alt="{{ producto.nombre }}" class="producto-img" >
+ <a href="#"><p>{{ producto.nombre }}</p></a>
+</div>
